@@ -1,0 +1,144 @@
+{
+  "CheckRecList": [
+    {
+      "sku_id": "AC000001-01",
+      "product_id": "AC000001",
+      "sku_code": "EF-RS901CWEGWW",
+      "sell_price": 1000,
+      "recom_price": 1090,
+      "cost": 800,
+      "stock_quantity": 1,
+      "create_time": "2020-01-01T12:37:21.000Z",
+      "update_time": "2022-06-06T12:37:21.000Z",
+      "memo": "白",
+      "id": 1
+    },
+    {
+      "sku_id": "AC000001-02",
+      "product_id": "AC000001",
+      "sku_code": "EF-RS901CNEGWW",
+      "sell_price": 1000,
+      "recom_price": 1090,
+      "cost": 800,
+      "stock_quantity": 1,
+      "create_time": "2020-01-01T12:37:21.000Z",
+      "update_time": "2022-06-06T12:37:21.000Z",
+      "memo": "藍",
+      "id": 2
+    },
+    {
+      "sku_id": "AC000001-01",
+      "product_id": "AC000001",
+      "sku_code": "EF-RS901CWEGWW",
+      "sell_price": 1000,
+      "recom_price": 1090,
+      "cost": 800,
+      "stock_quantity": 1,
+      "create_time": "2019-12-31T16:00:00.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": "薰衣草紫",
+      "id": 3
+    },
+    {
+      "sku_id": "AC000002-01",
+      "product_id": "AC000002",
+      "sku_code": "EF-US901CTEGWW",
+      "sell_price": 488,
+      "recom_price": 499,
+      "cost": 300,
+      "stock_quantity": 10,
+      "create_time": "2019-12-31T16:00:00.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": "S22 原廠透明螢幕保護貼",
+      "id": 4
+    },
+    {
+      "sku_id": "AC000003-01",
+      "product_id": "AC000003",
+      "sku_code": "'combo-touch-ipad.920-010734'",
+      "sell_price": 5490,
+      "recom_price": 5990,
+      "cost": 4000,
+      "stock_quantity": 5,
+      "create_time": "2019-12-31T16:00:00.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": " iPad Pro 11 英吋 (第 1、2、3 代) 的 Combo Touch",
+      "id": 5
+    },
+    {
+      "sku_id": "AC000003-02",
+      "product_id": "AC000003",
+      "sku_code": "combo-touch-ipad.920-010190",
+      "sell_price": 5490,
+      "recom_price": 5990,
+      "cost": 4000,
+      "stock_quantity": 5,
+      "create_time": "2019-12-31T16:00:00.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": " iPad Pro 12.9 英吋 (第 5 代) 的 Combo Touch",
+      "id": 6
+    },
+    {
+      "sku_id": "AC000004-01",
+      "product_id": "AC000004",
+      "sku_code": "slim-folio-pro.920-009681",
+      "sell_price": 4590,
+      "recom_price": 4990,
+      "cost": 3500,
+      "stock_quantity": 4,
+      "create_time": "2019-12-31T16:00:00.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": "iPad Pro 11 英吋 (第1、2、3 代) 的 Slim Folio Pro",
+      "id": 7
+    },
+    {
+      "sku_id": "AC000004-02",
+      "product_id": "AC000004",
+      "sku_code": "slim-folio-pro.920-009702",
+      "sell_price": 4590,
+      "recom_price": 4990,
+      "cost": 3500,
+      "stock_quantity": 4,
+      "create_time": "2020-01-01T12:37:21.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": "iPad Pro 12.9 英吋 (第 3 代和第 4 代) 的 Slim Folio Pro",
+      "id": 8
+    },
+    {
+      "sku_id": "CG000001-01",
+      "product_id": "CG000001",
+      "sku_code": "TC-G1000-US-WC",
+      "sell_price": 2999,
+      "recom_price": 3199,
+      "cost": 2599,
+      "stock_quantity": 5,
+      "create_time": "2020-01-01T12:37:21.000Z",
+      "update_time": "2022-07-06T06:37:21.000Z",
+      "memo": "白色，含數據線",
+      "id": 9
+    },
+    {
+      "sku_id": "HS000001-01",
+      "product_id": "HS000001",
+      "sku_code": "H800.981-000339",
+      "sell_price": 2000,
+      "recom_price": 2950,
+      "cost": 1500,
+      "stock_quantity": 3,
+      "create_time": "2020-01-01T12:37:21.000Z",
+      "update_time": "2022-06-05T16:00:00.000Z",
+      "memo": "",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
