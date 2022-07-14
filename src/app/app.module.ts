@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import {DataTablesModule} from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionComponent } from './components/transaction/transaction.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionComponent
+    TransactionComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

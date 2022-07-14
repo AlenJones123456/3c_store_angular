@@ -1,0 +1,14 @@
+<p>product list</p>
+<ul class="list-group">
+  <li
+      *ngFor="let post of posts"
+      class="list-group-item ">
+      {{ post.product_id}}
+      {{ post.product_name}}
+      {{ post.product_model}}
+      {{ post.brand_id}}
+      {{ post.category_id}}
+      {{ post.supplier_id}}
+      {{ post.create_time}}
+  </li>
+</ul>
