@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>trans_id</th>
+                    <th>employee_id</th>
+                    <th>customer_id</th>
+                    <th>trans_date</th>
+                    <th>total_price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let trans of allTransaction">
+                    <td>{{ trans.trans_id }}</td>
+                    <td>{{ trans.employee_id }}</td>
+                    <td>{{ trans.customer_id }}</td>
+                    <td>{{ trans.trans_date }}</td>
+                    <td>{{ trans.total_price }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
