@@ -1,14 +1,26 @@
-<p>product list</p>
-<ul class="list-group">
-  <li
-      *ngFor="let post of posts"
-      class="list-group-item ">
-      {{ post.product_id}}
-      {{ post.product_name}}
-      {{ post.product_model}}
-      {{ post.brand_id}}
-      {{ post.category_id}}
-      {{ post.supplier_id}}
-      {{ post.create_time}}
-  </li>
-</ul>
+<h1 class="alert alert-info text-center" >PRODUCT</h1>
+
+<table class="table">
+  <thead class="alert alert-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">PRODUCT_NAME</th>
+      <th scope="col">PRODUCT_MODEL</th>
+      <th scope="col">BRAND_ID</th>
+      <th scope="col">CATEGORY_ID</th>
+      <th scope="col">SUPPLIER_ID</th>
+      <th scope="col">CREATE_TIME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.product_id}}</td>
+      <td>{{ post.product_name}}</td>
+      <td>{{ post.product_model}}</td>
+      <td>{{ post.brand_id}}</td>
+      <td>{{ post.category_id}}</td>
+      <td>{{ post.supplier_id}}</td>
+      <td>{{ post.create_time}}</td>
+    </tr>
+  </tbody>
+</table>
