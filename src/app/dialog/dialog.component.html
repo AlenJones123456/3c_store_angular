@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Add Data Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="CheckRecForm">
+        <mat-form-field appearance="outline">
+            <mat-label>SKU ID</mat-label>
+            <input formControlName="sku_id" matInput placeholder="SKU ID..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Product ID</mat-label>
+            <input formControlName="product_id" matInput placeholder="Product ID..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>SKU Code</mat-label>
+            <input formControlName="sku_code" matInput placeholder="SKU Code..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Sell Price</mat-label>
+            <input formControlName="sell_price" matInput type="number" placeholder="Sell Price..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Recommended Price</mat-label>
+            <input formControlName="recom_price" matInput type="number" placeholder="Recommended Price..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Cost</mat-label>
+            <input formControlName="cost" matInput type="number" placeholder="Cost..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Stock Quantity</mat-label>
+            <input formControlName="stock_quantity" matInput type="number"placeholder="Quantity..">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Time Created</mat-label>
+            <input formControlName="create_time" matInput [matDatepicker]="picker1">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Time Updated</mat-label>
+            <input formControlName="update_time" matInput [matDatepicker]="picker2">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Memo</mat-label>
+            <textarea formControlName="memo" matInput placeholder="Memo.."></textarea>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addProduct()">Add</button>
+    <button style="margin-left : 10px;" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+</div>
