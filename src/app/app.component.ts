@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class AppComponent implements OnInit{
   title = 'CheckRecord';
-  displayedColumns: string[] = ['sku_id', 'product_id', 'sku_code', 'sell_price', 'recom_price', 'cost', 'stock_quantity', 'create_time', 'update_time', 'memo'];
+  displayedColumns: string[] = ['sku_id', 'product_id', 'sku_code', 'sell_price', 'recom_price', 'cost', 'stock_quantity', 'create_time', 'update_time'];
   dataSource !: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator !: MatPaginator;
@@ -33,8 +33,8 @@ export class AppComponent implements OnInit{
   getAllProducts(){
     this.api.getProduct()
     .subscribe({
-      next:(res)=>{
-        this.dataSource = new MatTableDataSource(res);
+      next:(res:any)=>{
+        this.dataSource = new MatTableDataSource(res.sku);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
