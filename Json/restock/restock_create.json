@@ -1,4 +1,4 @@
-[
+
     {
         "data": {
             "supplier_id":["1, 2, 3"],
@@ -9,4 +9,3 @@
         "title": "restock_create"
     }
     
-]
