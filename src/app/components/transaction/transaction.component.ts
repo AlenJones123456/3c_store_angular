@@ -8,17 +8,16 @@ import { TransactionService } from '../../services/transaction/transaction.servi
 })
 export class TransactionComponent implements OnInit {
   allTransaction: any = [];
-  constructor(private service: TransactionService) { }
+  constructor(private TransLink: TransactionService) { }
 
   ngOnInit(): void {
     this.transaction();
   }
 
   transaction(): void {
-    this.service
+    this.TransLink
         .transaction()
         .subscribe((response: any) => {
-          console.log(response.transaction)
           this.allTransaction = response.transaction;
         });
   }
