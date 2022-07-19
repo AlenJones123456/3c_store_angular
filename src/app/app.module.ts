@@ -13,6 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { FormComponent } from './components/form/form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBootstrapComponent } from './components/form-bootstrap/form-bootstrap.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,9 @@ import {MatButtonModule} from '@angular/material/button';
     TransactionComponent,
     ProductComponent,
     SkuComponent,
-    NavbarComponent
+    NavbarComponent,
+    FormComponent,
+    FormBootstrapComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,11 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

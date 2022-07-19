@@ -1,0 +1,129 @@
+<div class="card">
+<h1 mat-form-title class="mat-form-title">Add Data Form</h1>
+    <form [formGroup]="SKUForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Brand ID</mat-label>
+            <mat-select formControlName="brand_id" placeholder="Brand ID..">
+              <mat-option value="B0001">B0001</mat-option>
+              <mat-option value="B0002">B0002</mat-option>
+              <mat-option value="B0003">B0003</mat-option>
+              <mat-option value="B0004">B0004</mat-option>
+              <mat-option value="B0005">B0005</mat-option>
+              <mat-option value="B0006">B0006</mat-option>
+              <mat-option value="B0007">B0007</mat-option>
+              <mat-option value="B0008">B0008</mat-option>
+              <mat-option value="B0009">B0009</mat-option>
+              <mat-option value="B0010">B0010</mat-option>
+              <mat-option value="B0011">B0011</mat-option>
+              <mat-option value="B0012">B0012</mat-option>
+              <mat-option value="B0013">B0013</mat-option>
+              <mat-option value="B0014">B0014</mat-option>
+              <mat-option value="B0015">B0015</mat-option>
+              <mat-option value="B0016">B0016</mat-option>
+              <mat-option value="B0017">B0017</mat-option>
+              <mat-option value="B0018">B0018</mat-option>
+              <mat-option value="B0019">B0019</mat-option>
+              <mat-option value="B0020">B0020</mat-option>
+              <mat-option value="B0021">B0021</mat-option>
+              <mat-option value="B0022">B0022</mat-option>
+              <mat-option value="B0023">B0023</mat-option>
+              <mat-option value="B0024">B0024</mat-option>
+              <mat-option value="B0025">B0025</mat-option>
+              <mat-option value="B0026">B0026</mat-option>
+              <mat-option value="B0027">B0027</mat-option>
+              <mat-option value="B0028">B0028</mat-option>
+              <mat-option value="B0029">B0029</mat-option>
+              <mat-option value="B0030">B0030</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Brand Name</mat-label>
+            <mat-select formControlName="brand_name" placeholder="Brand Name...">
+                <mat-option value="samsung">Samsung</mat-option>
+                <mat-option value="apple">Apple</mat-option>
+                <mat-option value="logitech">Logitech</mat-option>
+                <mat-option value="msi">MSI</mat-option>
+                <mat-option value="microsoft">Microsoft</mat-option>
+                <mat-option value="asus">Asus</mat-option>
+                <mat-option value="htc">HTC</mat-option>
+                <mat-option value="acer">Acer</mat-option>
+                <mat-option value="canon">Canon</mat-option>
+                <mat-option value="sony">Sony</mat-option>
+                <mat-option value="intel">Intel</mat-option>
+                <mat-option value="panasonic">Panasonic</mat-option>
+                <mat-option value="nikon">Nikon</mat-option>
+                <mat-option value="hp">Hewlett-packard(HP)</mat-option>
+                <mat-option value="dell">Dell</mat-option>
+                <mat-option value="lenovo">Lenovo</mat-option>
+                <mat-option value="acer">Acer</mat-option>
+                <mat-option value="xiaomi">Xiaomi</mat-option>
+                <mat-option value="google">Google</mat-option>
+                <mat-option value="oppo">Oppo</mat-option>
+                <mat-option value="huawei">Huawei</mat-option>
+                <mat-option value="epson">Epson</mat-option>
+                <mat-option value="lg">LG</mat-option>
+                <mat-option value="sharp">Sharp</mat-option>
+                <mat-option value="toshiba">Toshiba</mat-option>
+                <mat-option value="benq">BenQ</mat-option>
+                <mat-option value="nokia">Nokia</mat-option>
+                <mat-option value="viewsonic">ViewSonic</mat-option>
+                <mat-option value="micron">Micron</mat-option>
+                <mat-option value="razer">Razer</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier ID</mat-label>
+            <mat-select formControlName="supplier_id" placeholder="Supplier ID...">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier Name</mat-label>
+            <mat-select formControlName="supplier_name" placeholder="Supplier Name...">
+                <mat-option value="jieyuan">捷元股份有限公司</mat-option>
+                <mat-option value="shopee">蝦皮</mat-option>
+                <mat-option value="pchome">PCHome</mat-option>
+                <mat-option value="amazon">Amazon</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category ID</mat-label>
+            <mat-select formControlName="category_id" placeholder="Category ID...">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+                <mat-option value="5">5</mat-option>
+                <mat-option value="6">6</mat-option>
+                <mat-option value="7">7</mat-option>
+                <mat-option value="8">8</mat-option>
+                <mat-option value="9">9</mat-option>
+                <mat-option value="10">10</mat-option>
+                <mat-option value="11">11</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category Name</mat-label>
+            <mat-select formControlName="category_name" placeholder="Category Name...">
+                <mat-option value="smartphone">SmartPhone</mat-option>
+                <mat-option value="accessories">Accessories</mat-option>
+                <mat-option value="notebook">Notebook</mat-option>
+                <mat-option value="screen">Screen(LCD)</mat-option>
+                <mat-option value="cable">Cable</mat-option>
+                <mat-option value="tablet">Tablet</mat-option>
+                <mat-option value="storage">Storage</mat-option>
+                <mat-option value="mouse">Mouse</mat-option>
+                <mat-option value="keyboard">Keyboard</mat-option>
+                <mat-option value="charger">Charger</mat-option>
+                <mat-option value="headset">Headset</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <div mat-form-action>
+        <button mat-raised-button color="primary" (click)="addData">Add</button>
+        <button mat-raised-button color="warn" mat-form-close>Cancel</button>
+    </div>
+</div>
