@@ -7,18 +7,30 @@ import {DataTablesModule} from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { ProductComponent } from './components/product/product.component';
+import { SkuComponent } from './components/sku/sku.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
-    ProductComponent
+    ProductComponent,
+    SkuComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
