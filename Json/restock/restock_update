@@ -1,0 +1,15 @@
+[
+    {
+        "data": {
+            
+                "restock_id":"5ca1ad1b-c093-417d-9732-06dc765456a0", 
+                "sku_code": ["MLK83, MLK33, WT-W09"],
+                "cost": 15000,
+                "quantity": 8, 
+                "memo": " "
+            
+        },
+        "title": "restock_update"
+    }
+    
+]

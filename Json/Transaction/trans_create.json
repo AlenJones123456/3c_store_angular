@@ -1,0 +1,10 @@
+[
+  {
+      "data": {
+        "employee_name":"黃士璇", 
+        "customer_name": "黃冠峰",
+        "total_price":"314585"
+      },
+      "title": "trans_record create"
+  }
+]

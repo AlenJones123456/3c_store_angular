@@ -7,12 +7,14 @@ import {DataTablesModule} from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { ProductComponent } from './components/product/product.component';
+import { RestockComponent } from './components/restock/restock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
-    ProductComponent
+    ProductComponent,
+    RestockComponent
   ],
   imports: [
     BrowserModule,

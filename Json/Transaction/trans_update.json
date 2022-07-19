@@ -1,0 +1,13 @@
+[
+    {
+        "data": {
+            "employee_id":"E000046", 
+            "employee_name":"黃士璇",
+            "customer_id ": "C000005", 
+            "customer_name": "黃冠峰",
+            "trans_date/time": "2020-01-01 09:34:30",
+            "total_price":"314585"
+        },
+        "title": "trans_record update"
+      }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "data": {
+            "supplier_id":["1, 2, 3"],
+            "product_name":["SONY 耳罩式耳機 WH-1000XM4 無線藍牙/有線兩用 HD降噪 音質升級 降噪優化【保固一年】, SLIM FOLIO PRO FOR IPAD PRO, Samsung Galaxy S22"] ,
+            "sku_code": ["MLK83, MLK33, WT-W09"],
+            "restock_id":"666f3fc4-748d-4598-ae19-33d09d90124a",
+            "cost": 15000,
+            "quantity": 8, 
+            "memo":" "
+        },
+        "title": "restock_read"
+    }
+    
+]

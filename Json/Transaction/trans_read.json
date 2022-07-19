@@ -1,0 +1,13 @@
+[
+  {
+    "data": {
+      "trans_id ": "60cc0a04-320d-4126-87a8-54387956d116 ",
+      "employee_id":"E000046",
+      "customer_id ": "C000005",
+      "trans_date/time": "2020-01-01 09:34:30",
+      "total_price":"314585"
+    },
+    "title": "trans_record read"
+  }
+
+]
