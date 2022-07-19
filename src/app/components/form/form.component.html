@@ -21,7 +21,7 @@
     <label for="brand">Brand</label>
     <br/>
     <select formControlName="brand"  id="brand">
-      <option *ngFor="let post of posts" [ngValue]="">{{ post.brand_id}}</option>
+      <option *ngFor="let post of posts" [ngValue]="">{{ post.brand_name}}/{{ post.brand_id}}</option>
     </select>
   </div>
   <br/>

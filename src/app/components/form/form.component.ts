@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
       product_model:["",[Validators.required]],
       brand:new FormControl(this.posts[0],Validators.required),
       category:new FormControl(this.posts[0],Validators.required),
-      supplier:[],
+      supplier:new FormControl(this.posts[0],Validators.required),
 
     });
    }

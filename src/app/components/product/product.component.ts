@@ -12,7 +12,6 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.productURL.getPosts()
       .subscribe((response:any) => {
-        console.log(response)
         this.posts = response.Products;
       });
 }
