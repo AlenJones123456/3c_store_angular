@@ -1,0 +1,16 @@
+[
+  {
+    "data": {
+      "product_id":"AC000001",
+      "product_name ": "SAMSUNG Galaxy Note 20",
+      "product_model":"EF-RS901",
+      "brand_id":"B0001",
+      "brand_name":"SAMSUNG",
+      "supplier_id":"1",
+      "supplier_name":"pchome",
+      "category_id":"1",
+      "category_name":"Notebook"
+    },
+    "title": "product_update"
+  }
+]
