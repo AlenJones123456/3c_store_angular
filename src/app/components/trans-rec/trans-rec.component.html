@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>restock_id</th>
+                    <th>employee_id</th>
+                    <th>supplier_id</th>
+                    <th>restock_date</th>
+                    <th>total_price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let transrec of allTransRec">
+                    <td>{{ transrec.restock_id }}</td>
+                    <td>{{ transrec.employee_id }}</td>
+                    <td>{{ transrec.supplier_id }}</td>
+                    <td>{{ transrec.restock_date }}</td>
+                    <td>{{ transrec.total_price }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
