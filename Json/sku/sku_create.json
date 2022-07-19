@@ -1,0 +1,14 @@
+[
+    {
+      "data": {
+        "brand_id":["B0001","B0002","B0003"],
+        "brand_name":["SAMSUNG","APPLE","LOGITECH"],
+        "supplier_id":["1","2","3"],
+        "supplier_name":["pchome","捷元股份有限公司","amazon"],
+        "category_id":["1","2","3"],
+        "category_name":["Notebook","Smartphone","Screen(LCD)"]
+      },
+      "title": "sku_create"
+    }
+  ]
+  
