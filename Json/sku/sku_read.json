@@ -1,0 +1,18 @@
+[
+    {
+      "data": {
+        "sku_id": "AC000001-01",
+        "product_id": "AC000001",
+        "product_name ": ["SAMSUNG Galaxy Note 20","MX MASTER 3S","Lenovo Legion 5 15.6吋電競筆電"],
+        "sku_code": "EF-RS901CWEGWW",
+        "sell_price": 1000,
+        "recom_price": 1090,
+        "cost": 800,
+        "stock_quantity": 1,
+        "create_time": "01/01/2020, 20:37:21",
+        "update_time": "06/06/2022, 20:37:21"
+      },
+      "title": "sku_read"
+    }
+  ]
+  

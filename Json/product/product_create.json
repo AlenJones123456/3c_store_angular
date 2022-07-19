@@ -1,15 +1,12 @@
 [
   {
     "data": {
-      "product_name ": "SAMSUNG Galaxy Note 20",
-      "product_model":"EF-RS901",
-      "brand_id":"B0001",
-      "brand_name":"SAMSUNG",
-      "supplier_id":"1",
-      "supplier_name":"pchome",
-      "category_id":"1",
-      "category_name":"Notebook"
-
+      "brand_id":["B0001","B0002","B0003"],
+      "brand_name":["SAMSUNG","APPLE","LOGITECH"],
+      "supplier_id":["1","2","3"],
+      "supplier_name":["pchome","捷元股份有限公司","amazon"],
+      "category_id":["1","2","3"],
+      "category_name":["Notebook","Smartphone","Screen(LCD)"]
     },
     "title": "product_create"
   }
