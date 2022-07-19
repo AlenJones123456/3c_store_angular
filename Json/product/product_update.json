@@ -1,15 +1,15 @@
 [
   {
     "data": {
-      "product_id":"AC000001",
-      "product_name ": "SAMSUNG Galaxy Note 20",
-      "product_model":"EF-RS901",
-      "brand_id":"B0001",
-      "brand_name":"SAMSUNG",
-      "supplier_id":"1",
-      "supplier_name":"pchome",
-      "category_id":"1",
-      "category_name":"Notebook"
+      "product_id":["AC000001","CG000001","NB000004"],
+      "product_name ":["SAMSUNG Galaxy Note 20","MX MASTER 3S","Lenovo Legion 5 15.6吋電競筆電"],
+      "product_model":["EF-RS901","KRAKEN-X","82JW00FQTW"],
+      "brand_id":["B0001","B0002","B0003"],
+      "brand_name":["SAMSUNG","APPLE","LOGITECH"],
+      "supplier_id":["1","2","3"],
+      "supplier_name":["pchome","捷元股份有限公司","amazon"],
+      "category_id":["1","2","3"],
+      "category_name":["Notebook","Smartphone","Screen(LCD)"]
     },
     "title": "product_update"
   }
