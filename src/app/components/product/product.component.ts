@@ -7,10 +7,10 @@ import { ProductService } from 'src/app/services/products/product.service';
 })
 export class ProductComponent implements OnInit {
   posts:any=[];
-  constructor(private service:ProductService) { }
+  constructor(private productURL:ProductService) { }
 
   ngOnInit() {
-    this.service.getPosts()
+    this.productURL.getPosts()
       .subscribe((response:any) => {
         console.log(response)
         this.posts = response.Products;
