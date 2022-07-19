@@ -18,6 +18,12 @@ import { ProductsComponent } from './Sidebarsample/products/products.component';
 import { SettingsComponent } from './Sidebarsample/settings/settings.component';
 import { SidenavComponent } from './Sidebarsample/sidenav/sidenav.component';
 import { StatisticsComponent } from './Sidebarsample/statistics/statistics.component';
+import { FormSampleComponent } from './form-sample/form-sample.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,14 +38,19 @@ import { StatisticsComponent } from './Sidebarsample/statistics/statistics.compo
     ProductsComponent,
     SettingsComponent,
     SidenavComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    FormSampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatSelectModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

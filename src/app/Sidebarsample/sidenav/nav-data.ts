@@ -4,4 +4,5 @@ export const navbarData = [
         icon: 'fal fa-home',
         label: 'Dashboard'
     }
-]
+];
+
