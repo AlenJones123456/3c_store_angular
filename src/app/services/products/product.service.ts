@@ -13,6 +13,7 @@ export class ProductService {
 
   getPosts(){
     return this.httpClient.get(this.url);
+
   }
   getRead(){
     return this.httpClient.get(this.urlread);

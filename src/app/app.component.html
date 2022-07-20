@@ -1,6 +1,15 @@
 <div class="container">
-<!-- <app-product></app-product>
-<app-transaction></app-transaction> -->
-<app-form-product-create></app-form-product-create>
-<app-form-product-read></app-form-product-read>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <ul>
+      <li><a href="http://localhost:4200/create">product-create</a></li>
+      <li><a href="http://localhost:4200/read">product-read</a></li>
+    </ul>
+  </nav>
+  <div class="component-container">
+   <!-- <app-product></app-product> -->
+  <!-- <app-transaction></app-transaction> -->
+  <!-- <app-form-product-create></app-form-product-create>
+  <app-form-product-read></app-form-product-read> -->
+  <router-outlet></router-outlet>
+  </div>
 </div>
