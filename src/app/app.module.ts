@@ -7,7 +7,6 @@ import {DataTablesModule} from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { ProductComponent } from './components/product/product.component';
-import { TransRecComponent } from './components/trans-rec/trans-rec.component';
 import { RouterModule } from '@angular/router';
 import { BodyComponent } from './Sidebarsample/body/body.component';
 import { CoupensComponent } from './Sidebarsample/coupens/coupens.component';
@@ -18,18 +17,18 @@ import { ProductsComponent } from './Sidebarsample/products/products.component';
 import { SettingsComponent } from './Sidebarsample/settings/settings.component';
 import { SidenavComponent } from './Sidebarsample/sidenav/sidenav.component';
 import { StatisticsComponent } from './Sidebarsample/statistics/statistics.component';
-import { FormSampleComponent } from './form-sample/form-sample.component';
+import { FormSampleComponent } from './form-restockdetail/form-restockdetail.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
     ProductComponent,
-    TransRecComponent,
     BodyComponent,
     CoupensComponent,
     DashboardComponent,
@@ -50,7 +49,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatSelectModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
