@@ -1,17 +1,7 @@
 <h1 class="alert alert-info text-center" >PRODUCT</h1>
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul  class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
-    <li><a *ngFor="let post of posts" class="dropdown-item" data-bs-toggle="dropdown" href="#">{{post.product_id}}</a></li>
-
-
-  </ul>
+<div class="posts">
+  <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search by posts ,product_id or post.product_name">
 </div>
-
-
 <table class="table table-bordered table-striped table-hover ">
   <thead class="alert alert-dark">
     <tr>
@@ -22,10 +12,11 @@
       <th scope="col">CATEGORY_ID</th>
       <th scope="col">SUPPLIER_ID</th>
       <th scope="col">CREATE_TIME</th>
+      <th scope="col">DETAILS</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let post of posts">
+    <tr *ngFor="let post of posts | filter :searchText" >
       <td>{{ post.product_id}}</td>
       <td>{{ post.product_name}}</td>
       <td>{{ post.product_model}}</td>
@@ -33,7 +24,7 @@
       <td>{{ post.category_id}}</td>
       <td>{{ post.supplier_id}}</td>
       <td>{{ post.create_time}}</td>
-      <td>{{ post.create_time}}</td>
+      <td>{{ post.details}}</td>
     </tr>
   </tbody>
 </table>
