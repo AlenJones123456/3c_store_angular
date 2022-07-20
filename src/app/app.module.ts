@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBootstrapComponent } from './components/form-bootstrap/form-bootstrap.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormBootstrapComponent } from './components/form-bootstrap/form-bootstr
     SkuComponent,
     NavbarComponent,
     FormComponent,
-    FormBootstrapComponent
+    FormBootstrapComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
