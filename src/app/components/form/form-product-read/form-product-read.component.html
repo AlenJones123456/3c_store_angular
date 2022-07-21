@@ -4,15 +4,9 @@
 </div><br/>
 <table class="table table-bordered table-striped table-hover ">
   <thead class="alert alert-dark">
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">PRODUCT_NAME</th>
-      <th scope="col">PRODUCT_MODEL</th>
-      <th scope="col">BRAND_ID</th>
-      <th scope="col">CATEGORY_ID</th>
-      <th scope="col">SUPPLIER_ID</th>
-      <th scope="col">CREATE_TIME</th>
-      <th scope="col">DETAILS</th>
+    <tr >
+      <th *ngFor="let th of tb" scope="col">{{th}}</th>
+
     </tr>
   </thead>
   <tbody>

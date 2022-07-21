@@ -7,7 +7,10 @@ import { ProductService } from 'src/app/services/products/product.service';
 })
 export class FormProductReadComponent implements OnInit {
   searchText:any;
-  posts:any=[];
+  posts:string="";
+  tb:string[]=[
+    'ID','PRODUCT_NAME','PRODUCT_MODEL','BRAND_ID','CATEGORY_ID','SUPPLIER_ID','CREATE_TIME','DETAILS'
+  ];
   constructor(private productRead:ProductService) { }
 
   ngOnInit(): void {

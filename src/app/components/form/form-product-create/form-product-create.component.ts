@@ -12,12 +12,12 @@ import { __values } from 'tslib';
 })
 export class FormProductCreateComponent implements OnInit {
   form:any;
-  brands_id:any=[];
-  brand_name:any=[];
-  category_name:any=[];
-  category_id:any=[];
-  supplier_name:any=[];
-  supplier_id:any=[];
+  brands_id:string="";
+  brand_name:string="";
+  category_name:string="";
+  category_id:number[]=[];
+  supplier_name:string="";
+  supplier_id:number[]=[];
   constructor(private fb:FormBuilder,private productURL:ProductService) {
     this.form=this.fb.group({
       product_name:["",[Validators.required]],//Validators驗證，required必填
