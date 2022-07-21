@@ -3,8 +3,10 @@ import { ProductService } from 'src/app/services/products/product.service';
 import { FormBuilder, FormControl } from '@angular/forms';//form
 import { Validators } from '@angular/forms';//驗證效果
 import { __values } from 'tslib';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { post } from 'jquery';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-form-product-read',
@@ -43,11 +45,11 @@ export class FormProductReadComponent implements OnInit {
     }
     else
     {
-     this.http.post("http://127.0.0.1:5000/3c_store/api/v1/product/addproduct/",f)
+     this.http.post(environment.url+"product/addproduct/",f)
      .subscribe((result)=>{
        console.log("result",result);
      })
-      console.log(f);
+      console.log();
       alert("success")
 
     }
@@ -73,12 +75,15 @@ export class FormProductReadComponent implements OnInit {
 
   }
   deleteProduct(post:any){
-    this.http.delete("http://127.0.0.1:5000/3c_store/api/v1/product/product/",post.value)
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body:{'product_id':post}
+  };
+    this.http.delete("http://127.0.0.1:5000/3c_store/api/v1/product/product/",httpOptions)
      .subscribe((result)=>{
        console.log("result",result);
      })
       console.log(post);
-      alert("success")
+      alert(post)
 
     }
   }
