@@ -1,0 +1,46 @@
+      <form [formGroup]="forms">
+        <div class ="container">
+          <div class="form-group">
+            <label for="floatingInput">product_name</label>
+            <br/>
+            <select formControlName="productName" id="slct1" (change)="onSelect($event)" >
+              <option *ngFor="let item of sku_restock; let i =index" [value]="item.product_id">{{item.product_name}}({{item.product_id}})</option>
+          </select>
+          
+          <div id="validationServer04Feedback" class="invalid-feedback">
+            Please select a valid state.
+          </div>
+      </div>
+      
+        <div class="form-group">
+          <label for="floatingInput">sku_code</label>
+          <br/>
+          <select formControlName="skucode" id="slct2" required>
+            <option *ngFor="let item of sku_restock; let i =index" [value]="item.sku.sku_id">{{item.sku.sku_code}}({{item.sku.sku_id}})</option>
+        </select>
+          <div id="validationServer04Feedback" class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="floatingInput">cost</label>
+          <input type="text" class="form-control" id="cost" formControlName="cost">
+          <div id="validationServer04Feedback" class="invalid-feedback">
+            Please input a valid state.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validationTextarea" class="form-label">Memo</label>
+          <textarea class="form-control" id="validationTextarea" placeholder="Please enter a message" required></textarea>
+          <div class="invalid-feedback">
+            Please enter a message.
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </div>
+  
+
+ 

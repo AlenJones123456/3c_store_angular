@@ -27,6 +27,7 @@
     "angular-datatables": "^14.0.0",
     "datatables.net": "^1.11.3",
     "datatables.net-bs5": "^1.11.3",
+    "formbuilder": "^0.0.0",
     "jquery": "^3.6.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

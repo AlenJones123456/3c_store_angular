@@ -17,12 +17,13 @@ import { ProductsComponent } from './Sidebarsample/products/products.component';
 import { SettingsComponent } from './Sidebarsample/settings/settings.component';
 import { SidenavComponent } from './Sidebarsample/sidenav/sidenav.component';
 import { StatisticsComponent } from './Sidebarsample/statistics/statistics.component';
-import { FormSampleComponent } from './form-restockdetail/form-restockdetail.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormCreateRestockComponent } from './form-create-restock/form-create-restock.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SettingsComponent,
     SidenavComponent,
     StatisticsComponent,
-    FormSampleComponent
+    FormCreateRestockComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
