@@ -3,7 +3,7 @@ import { FormBuilder, FormControl } from '@angular/forms';//form
 import { Validators } from '@angular/forms';//驗證效果
 import { ProductService } from 'src/app/services/products/product.service';
 import { __values } from 'tslib';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form-product-create',
@@ -18,25 +18,31 @@ export class FormProductCreateComponent implements OnInit {
   category_id:number[]=[];
   supplier_name:string="";
   supplier_id:number[]=[];
-  constructor(private fb:FormBuilder,private productURL:ProductService) {
+
+  constructor(private fb:FormBuilder,private productURL:ProductService,private http:HttpClient) {
     this.form=this.fb.group({
       product_name:["",[Validators.required]],//Validators驗證，required必填
       product_model:["",[Validators.required]],
-      brand:new FormControl(this.brand_name[0],Validators.required),
-      category:new FormControl(this.category_name[0],Validators.required),
-      supplier:new FormControl(this.supplier_name[0],Validators.required),
+      details:'',
+      brand_id:new FormControl(this.brand_name[0],Validators.required),
+      category_id:new FormControl(this.category_name[0],Validators.required),
+      supplier_id:new FormControl(this.supplier_name[0],Validators.required),
 
     });
    }
 
    onSubmit(f:any){
+
      if(f.invalid){
        alert("invalid")
      }
      else
      {
+      this.http.post("http://127.0.0.1:5000/3c_store/api/v1/product/addproduct/",f)
+      .subscribe((result)=>{
+        console.log("result",result);
+      })
        console.log(f);
-       console.log(f.value);
        alert("success")
 
      }

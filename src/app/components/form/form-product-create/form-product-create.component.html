@@ -1,4 +1,4 @@
-<form  [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
   <div class="form-group">
     <label for="product_name">product_name</label>
     <input type="text" class="form-control" id="product_name" formControlName="product_name">
@@ -18,43 +18,46 @@
 
 
   <div class="form-group">
-    <label for="brand">Brand</label>
+    <label for="brand_id">Brand</label>
     <br/>
-    <select formControlName="brand"  id="brand">
+    <select formControlName="brand_id"  id="brand_id">
       <option *ngFor="let brands of brand_name ;let i = index" [ngValue]="brands_id[i]">{{brands}}
       </option>
     </select>
-    <div class="text-danger" *ngIf="form.controls.brand.errors && form.controls.brand.touched &&form.controls.brand.invalid">
-      <div *ngIf="form.controls.brand.errors.required">必選</div>
+    <div class="text-danger" *ngIf="form.controls.brand_id.errors && form.controls.brand_id.touched &&form.controls.brand_id.invalid">
+      <div *ngIf="form.controls.brand_id.errors.required">必選</div>
     </div>
   </div>
 
   <br/>
 
   <div class="form-group">
-    <label for="category">category</label><br/>
-    <select formControlName="category"  id="category">
+    <label for="category_id">category</label><br/>
+    <select formControlName="category_id"  id="category_id">
       <option *ngFor="let category of category_name ;let i = index" [ngValue]="category_id[i]">{{category}}
       </option>
     </select>
-    <div class="text-danger" *ngIf="form.controls.category.errors && form.controls.category.touched &&form.controls.category.invalid">
-      <div *ngIf="form.controls.category.errors.required">必選</div>
+    <div class="text-danger" *ngIf="form.controls.category_id.errors && form.controls.category_id.touched &&form.controls.category_id.invalid">
+      <div *ngIf="form.controls.category_id.errors.required">必選</div>
     </div>
   </div>
 
   <br/>
   <div class="form-group">
-    <label for="supplier">supplier</label><br/>
-    <select formControlName="supplier"  id="supplier">
+    <label for="supplier_id">supplier</label><br/>
+    <select formControlName="supplier_id"  id="supplier_id">
       <option *ngFor="let supplier of supplier_name ; let i = index" [ngValue]="supplier_id[i]">{{supplier}}</option>
     </select>
-    <div class="text-danger" *ngIf="form.controls.supplier.errors && form.controls.supplier.touched &&form.controls.supplier.invalid">
-      <div *ngIf="form.controls.supplier.errors.required">必選</div>
+    <div class="text-danger" *ngIf="form.controls.supplier_id.errors && form.controls.supplier_id.touched &&form.controls.supplier_id.invalid">
+      <div *ngIf="form.controls.supplier_id.errors.required">必選</div>
     </div>
   </div>
+
+  <div class="form-group">
+    <label for="details">details</label>
+    <input type="text" class="form-control" id="details" formControlName="details">
+
+  </div>
   <button type="submit">送出</button>
-
-
-
 </form>
 

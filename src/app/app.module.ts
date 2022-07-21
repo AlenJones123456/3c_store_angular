@@ -13,7 +13,7 @@ import { FormProductCreateComponent } from './components/form/form-product-creat
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { ProductComponent } from './components/product/product.component';
 import { FormProductReadComponent } from './components/form/form-product-read/form-product-read.component';
-import { FormEditTableComponent } from './components/form/form-edit-table/form-edit-table.component';//雙向綁定要import
+
 
 
 const appRoute:Routes=[
@@ -29,7 +29,7 @@ const appRoute:Routes=[
     ProductComponent,
     FormProductCreateComponent,
     FormProductReadComponent,
-    FormEditTableComponent,
+
 
   ],
   imports: [

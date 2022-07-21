@@ -1,1 +1,221 @@
+<!-- <div class="row d-flex justify-content-center modalWrapper mt-5">
+  <div mdbModal #modalAdd="mdbModal" class="modal fade addNewInputs" id="modalAdd" tabindex="-1" role="dialog"
+       aria-labelledby="modalAdd"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-primary ml-5">Add new form</h4>
+          <button type="button" class="close text-primary" (click)="modalAdd.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <form #addForm>
+            <div class="md-form mb-5">
+              <input type="text" id="inputName" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputName">Name</label>
+            </div>
 
+            <div class="md-form mb-5">
+              <input type="text" id="inputPosition" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputPosition">Position</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="inputOfficeInput" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputOfficeInput">Office</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="inputAge" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputAge">Age</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="date" id="inputDate" class="form-control" placeholder="Select Date" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputDate"></label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="inputSalary" class="form-control validate" mdbInput>
+              <label data-error="wrong" data-success="right" for="inputSalary">Salary</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center buttonAddFormWrapper">
+          <button mdbBtn color="primary" outline="true" block="true" class="buttonAdd" data-dismiss="modal"
+                  (click)="addModalForm(addForm, modalAdd)">Add form
+            <i class="fas fa-paper-plane-o ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <a mdbBtn color="info" rounded="true" size="sm" (click)="modalAdd.show()" data-target="#modalAdd" mdbWavesEffect>
+      Add <i class="fas fa-plus-square ml-1"></i></a>
+  </div>
+
+  <div mdbModal #modalEdit="mdbModal" class="modal fade modalEditClass" id="modalEdit" tabindex="-1" role="dialog"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold text-secondary ml-5">Edit form</h4>
+          <button type="button" class="close text-secondary" (click)="modalEdit.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <form #editForm>
+            <div class="md-form mb-5">
+              <input type="text" id="formNameEdit" class="form-control validate" mdbInput
+                     [value]="highlightedRow ? highlightedRow.name : ''">
+              <label data-error="wrong" data-success="right" for="formNameEdit">Name</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="formPositionEdit" class="form-control validate" mdbInput
+                     [value]="highlightedRow ? highlightedRow.position : ''">
+              <label data-error="wrong" data-success="right" for="formPositionEdit">Position</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="formOfficeEdit" class="form-control validate" mdbInput
+                     [value]="highlightedRow ? highlightedRow.office : ''">
+              <label data-error="wrong" data-success="right" for="formOfficeEdit">Office</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="formAgeEdit" class="form-control validate" mdbInput
+                     [value]="highlightedRow ? highlightedRow.age : ''">
+              <label data-error="wrong" data-success="right" for="formAgeEdit">Age</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="formDateEdit" class="form-control datepicker" mdbInput
+                     [value]="highlightedRow ? highlightedRow.start_date : ''">
+              <label data-error="wrong" data-success="right" for="formDateEdit">Date</label>
+            </div>
+
+            <div class="md-form mb-5">
+              <input type="text" id="formSalaryEdit" class="form-control validate" mdbInput
+                     [value]="highlightedRow ? highlightedRow.salary : ''">
+              <label data-error="wrong" data-success="right" for="formSalaryEdit">Salary</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center editInsideWrapper">
+          <button mdbBtn color="secondary" outline="true" block="true" class="editInside" data-dismiss="modal"
+                  (click)="editModalForm(editForm, modalEdit)">
+            Edit form <i class="fas fa-paper-plane-o ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center buttonEditWrapper">
+    <button mdbBtn color="info" rounded="true" size="sm" class="buttonEdit" [disabled]="!highlightedRow"
+            (click)="modalEdit.show()" data-target="#modalEdit">
+      Edit<i class="fas fa-pencil-square-o ml-1"></i></button>
+  </div>
+
+  <div mdbModal #modalDelete="mdbModal" class="modal fade" id="modalDelete" tabindex="-1" role="dialog"
+       aria-labelledby="modalDelete"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold ml-5 text-danger">Delete</h4>
+          <button type="button" class="close text-danger" (click)="modalDelete.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <p class="text-center h4">Are you sure to delete selected row?</p>
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center deleteButtonsWrapper">
+          <button mdbBtn color="danger" type="button" class="btnYesClass" id="btnYes" data-dismiss="modal" mdbWavesEffect
+                  (click)="modalRemove(modalDelete)">
+            Yes
+          </button>
+          <button mdbBtn color="primary" type="button" class="btnNoClass" id="btnNo" data-dismiss="modal" mdbWavesEffect
+                  (click)="modalDelete.hide()">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button mdbBtn color="danger" size="sm" rounded="true" class="buttonDelete" [disabled]="!highlightedRow" (click)="modalDelete.show()"
+            data-target="#modalDelete">Delete<i class="fas fa-times ml-1"></i></button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 mx-auto my-5">
+
+    <div class="row w-100 d-flex justify-content-between mx-auto">
+      <div class="col-md-3 my-3 d-flex align-items-center">
+        <span class="font-weight-bolder">Show</span>
+
+        <select class="browser-default custom-select mx-2" [(ngModel)]="visibleItems"
+                (ngModelChange)="visibleItems = +$event" style="width: unset;">
+          <option value="10" selected>10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+
+        <span class="font-weight-bolder">Entries</span>
+      </div>
+
+      <div class="col-md-6 my-3 text-right d-flex justify-content-between align-items-center">
+        <label class="font-weight-bolder mb-0">Search: </label>
+        <input type="search" class="form-control form-control-sm ml-2"[(ngModel)]="searchText">
+      </div>
+    </div>
+    <table mdbTableEditor class="table table-striped z-depth-1" [itemsPerPage]="visibleItems" #table="mdbEditor" (rowHighlight)="highlightedRow = $event">
+      <thead>
+      <tr>
+        <th
+          *ngFor="let head of headElements; let i = index"
+          scope="col"
+
+        >{{head}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of table.performSearch(this.searchText); let i = index">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.position}}</td>
+        <td>{{item.office}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.start_date}}</td>
+        <td>{{item.salary}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="7">
+          <div class="d-flex flex-center">
+            <span>Showing {{table.paginationInfo.firstItem}} to {{table.paginationInfo.lastItem}} of {{table.paginationInfo.allItems}} entries</span>
+            <div class="flex-1"></div>
+            <mdb-icon fas icon="angle-left" size="lg" (click)="table.prevPage()" class="p-2"
+                      [ngClass]="{'disabled text-muted': table.disablePrevious()}" mdbWavesEffect></mdb-icon>
+            <mdb-icon fas icon="angle-right" size="lg" (click)="table.nextPage()" class="p-2"
+                      [ngClass]="{'disabled text-muted': table.disableNext()}" mdbWavesEffect></mdb-icon>
+          </div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div> -->

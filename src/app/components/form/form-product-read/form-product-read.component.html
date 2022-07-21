@@ -1,6 +1,11 @@
-<h1 class="alert alert-info text-center" >PRODUCT</h1>
+
+<h1 class="text-center">PRODUCT</h1>
+<div class="d-flex">
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">ADD PRODUCT</button>
+</div>
+
 <div class="posts">
-  <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search by product_id or post.product_name">
+  <input type="text" name="search" [(ngModel)]="searchText"  ngModel="" placeholder="Search by product_id or post.product_name">
 </div><br/>
 <table class="table table-bordered table-striped table-hover ">
   <thead class="alert alert-dark">
@@ -19,6 +24,94 @@
       <td>{{ post.supplier_id}}</td>
       <td>{{ post.create_time}}</td>
       <td>{{ post.details}}</td>
+      <td>
+        <button (click)="deleteProduct(post.product_id)" class="btn btn-danger">Delete</button>
+        <button  class="btn btn-info">Edit</button>
+      </td>
     </tr>
   </tbody>
 </table>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ADD PRODUCT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+          <div class="form-group">
+            <label for="product_name">product_name</label>
+            <input type="text" class="form-control" id="product_name" formControlName="product_name">
+            <div class="text-danger" *ngIf="form.controls.product_name.errors && form.controls.product_name.touched &&form.controls.product_name.invalid">
+                <div *ngIf="form.controls.product_name.errors.required">必填</div>
+            </div>
+            </div>
+
+            <div class="form-group">
+              <label for="product_model">product_model</label>
+              <input type="text" class="form-control" id="product_model" formControlName="product_model">
+              <div class="text-danger" *ngIf="form.controls.product_model.errors && form.controls.product_model.touched &&form.controls.product_model.invalid">
+                  <div *ngIf="form.controls.product_model.errors.required">必填</div>
+              </div>
+              </div>
+
+
+
+          <div class="form-group">
+            <label for="brand_id">Brand</label>
+            <br/>
+            <select formControlName="brand_id"  id="brand_id">
+              <option *ngFor="let brands of brand_name ;let i = index" [ngValue]="brands_id[i]">{{brands}}
+              </option>
+            </select>
+            <div class="text-danger" *ngIf="form.controls.brand_id.errors && form.controls.brand_id.touched &&form.controls.brand_id.invalid">
+              <div *ngIf="form.controls.brand_id.errors.required">必選</div>
+            </div>
+          </div>
+
+          <br/>
+
+          <div class="form-group">
+            <label for="category_id">category</label><br/>
+            <select formControlName="category_id"  id="category_id">
+              <option *ngFor="let category of category_name ;let i = index" [ngValue]="category_id[i]">{{category}}
+              </option>
+            </select>
+            <div class="text-danger" *ngIf="form.controls.category_id.errors && form.controls.category_id.touched &&form.controls.category_id.invalid">
+              <div *ngIf="form.controls.category_id.errors.required">必選</div>
+            </div>
+          </div>
+
+          <br/>
+          <div class="form-group">
+            <label for="supplier_id">supplier</label><br/>
+            <select formControlName="supplier_id"  id="supplier_id">
+              <option *ngFor="let supplier of supplier_name ; let i = index" [ngValue]="supplier_id[i]">{{supplier}}</option>
+            </select>
+            <div class="text-danger" *ngIf="form.controls.supplier_id.errors && form.controls.supplier_id.touched &&form.controls.supplier_id.invalid">
+              <div *ngIf="form.controls.supplier_id.errors.required">必選</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="details">details</label>
+            <input type="text" class="form-control" id="details" formControlName="details">
+
+          </div>
+          <button type="submit" class="btn btn-primary">送出</button>
+        </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
