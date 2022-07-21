@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestockService } from '../../../../services/restock/restock.service';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form-create-restock',
@@ -19,7 +20,7 @@ export class FormCreateRestockComponent implements OnInit {
   sku_restock_code: any=[]
   sku_restock_cost: any=[]
 
-  constructor(private fobu:FormBuilder,private restock_dataurl:RestockService) { 
+  constructor(private fobu:FormBuilder,private restock_dataurl:RestockService,private http:HttpClient) { 
     this.forms=this.fobu.group({
       product_id:new FormControl(this.product_id[0],Validators.required),
       skucode:new FormControl(this.sku_code[0],Validators.required),
@@ -27,6 +28,24 @@ export class FormCreateRestockComponent implements OnInit {
       cost:new FormControl(this.cost[0],Validators.required),
 
     });
+  }
+
+  onSubmit(create:any){
+
+    if(create.invalid){
+      alert("invalid")
+    }
+    else
+    {
+     this.http.post("http://127.0.0.1:5000/3c_store/api/v1/transaction/restock",create)
+     .subscribe((result)=>{
+       console.log("result",result);
+     })
+      console.log(create);
+      alert("success")
+
+    }
+
   }
   
 
