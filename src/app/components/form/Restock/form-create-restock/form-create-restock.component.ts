@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestockService } from '../services/restock/restock.service';
+import { RestockService } from '../../../../services/restock/restock.service';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
@@ -17,6 +17,7 @@ export class FormCreateRestockComponent implements OnInit {
   cost: number[]=[];
   sku_restock: any=[]
   sku_restock_code: any=[]
+  sku_restock_cost: any=[]
 
   constructor(private fobu:FormBuilder,private restock_dataurl:RestockService) { 
     this.forms=this.fobu.group({
@@ -27,28 +28,19 @@ export class FormCreateRestockComponent implements OnInit {
 
     });
   }
+  
 
   ngOnInit(): void {
     this.restock_dataurl.getrestockdata().subscribe((response:any) => {
-      // this.product_id = response.data.product_id;
-      // this.sku_id = response.data.sku_id;
-      // this.product_name = response.data.product_name;
-      // this.sku_code = response.data.sku_code;
-      // this.cost = response.data.cost;
       this.sku_restock = response.data
+      
     })     
   }
   onSelect(event:any){
-    console.log(event.target.value)
-    
-    this.sku_restock.forEach(function (item:any) {
-      if(item.product_id==event.target.value) {
-        this.sku_restock_code=item.sku
-      }
-  });
-    
+    this.sku_restock_code=this.sku_restock.filter((product:any) => product.product_id==event.target.value)[0].sku;
+    // console.log(this.sku_restock_cost)
+    // const cost = document.getElementById(get_restock_cost)
   }
-    
 
   }
 

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>product_id</th>
+                    <th>product_name</th>
+                    <th>sku_id</th>
+                    <th>sku_code</th>
+                    <th>cost</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let rest of allRestock">
+                    <td>{{ rest.product_id }}</td>
+                    <td>{{ rest.product_name }}</td>
+                    <td>{{ rest.sku_id }}</td>
+                    <td>{{ rest.sku_code }}</td>
+                    <td>{{ rest.cost }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

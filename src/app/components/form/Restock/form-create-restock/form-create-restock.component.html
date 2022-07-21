@@ -1,10 +1,11 @@
-      <form [formGroup]="forms">
+      <form [formGroup]="forms" >
         <div class ="container">
           <div class="form-group">
             <label for="floatingInput">product_name</label>
             <br/>
             <select formControlName="productName" id="slct1" (change)="onSelect($event)" >
-              <option *ngFor="let item of sku_restock; let i =index" [value]="item.product_id">{{item.product_name}}({{item.product_id}})</option>
+              <option value="0" selected>--未選擇--</option>
+              <option *ngFor="let item of sku_restock;" [value]="item.product_id">{{item.product_name}}({{item.product_id}})</option>
           </select>
           
           <div id="validationServer04Feedback" class="invalid-feedback">
@@ -16,7 +17,8 @@
           <label for="floatingInput">sku_code</label>
           <br/>
           <select formControlName="skucode" id="slct2" required>
-            <option *ngFor="let item of sku_restock; let i =index" [value]="item.sku.sku_id">{{item.sku.sku_code}}({{item.sku.sku_id}})</option>
+            <option value="0" selected>--請先選擇產品--</option>
+            <option *ngFor="let item of sku_restock_code" [value]="item.sku_id">{{item.sku_code}}({{item.sku_id}})</option>
         </select>
           <div id="validationServer04Feedback" class="invalid-feedback">
             Please select a valid state.
@@ -25,7 +27,10 @@
       
         <div class="form-group">
           <label for="floatingInput">cost</label>
-          <input type="text" class="form-control" id="cost" formControlName="cost">
+          <br/>
+          <select formControlName="cost" id="slct3" required>
+            <option *ngFor="let item of sku_restock_cost;" [value]="item.cost">{{item.cost}}</option>
+      </select>
           <div id="validationServer04Feedback" class="invalid-feedback">
             Please input a valid state.
           </div>

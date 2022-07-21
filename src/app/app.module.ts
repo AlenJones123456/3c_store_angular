@@ -15,13 +15,15 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormCreateRestockComponent } from './components/form/Restock/form-create-restock/form-create-restock.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RestockComponent } from './components/restock/restock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
     ProductComponent,
-    FormCreateRestockComponent
+    FormCreateRestockComponent,
+    RestockComponent
   ],
   imports: [
     BrowserModule,
