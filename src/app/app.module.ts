@@ -19,6 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBootstrapComponent } from './components/form-bootstrap/form-bootstrap.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { FormSkuCreateComponent } from './components/form-sku/form-sku-create/form-sku-create.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     NavbarComponent,
     FormComponent,
     FormBootstrapComponent,
-    SidenavComponent
+    SidenavComponent,
+    FormSkuCreateComponent
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatFormFieldModule,
     MatSelectModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
