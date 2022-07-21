@@ -12,10 +12,10 @@ import { __values } from 'tslib';
 })
 export class FormSkuCreateComponent implements OnInit {
   sku:any=[];
-  form:any;
-  sku_id:any=[];
-  product_id:any=[];
-  sku_code:any=[];
+  form:any=[];
+  sku_id:string="";
+  product_id:string="";
+  sku_code:string="";
   sell_price:number[]=[];
   recom_price:number[]=[];
   cost:number[]=[];
@@ -27,6 +27,10 @@ export class FormSkuCreateComponent implements OnInit {
       sku_id:new FormControl(this.sku_id[0],Validators.required),
       product_id:new FormControl(this.product_id[0],Validators.required),
       sku_code:new FormControl(this.sku_code[0],Validators.required),
+      sell_price:new FormControl(this.sell_price[0],Validators.required),
+      recom_price:new FormControl(this.recom_price[0],Validators.required),
+      cost:new FormControl(this.cost[0],Validators.required),
+      stock_quantity:new FormControl(this.stock_quantity[0],Validators.required),
 
     });
    }

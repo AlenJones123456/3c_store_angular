@@ -3,6 +3,7 @@
         <label for="sku_id">SKU ID</label>
         <br/>
         <select formControlName="sku_id"  id="sku_id">
+          <option value="0" selected>--Select--</option>
           <option *ngFor="let skuid of sku">{{skuid.sku_id}}
           </option>
         </select>
@@ -15,6 +16,7 @@
         <label for="product_id">product ID</label>
         <br/>
         <select formControlName="product_id"  id="product_id">
+          <option value="0" selected>--Select--</option>
           <option *ngFor="let productid of sku">{{productid.product_id}}
           </option>
         </select>
@@ -27,6 +29,7 @@
         <label for="sku_code">SKU Code</label>
         <br/>
         <select formControlName="sku_code"  id="sku_code">
+          <option value="0" selected>--Select--</option>
           <option *ngFor="let skucode of sku">{{skucode.sku_code}}
           </option>
         </select>

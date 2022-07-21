@@ -13,14 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { FormComponent } from './components/form/form.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormBootstrapComponent } from './components/form-bootstrap/form-bootstrap.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FormSkuCreateComponent } from './components/form-sku/form-sku-create/form-sku-create.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormSkuSearchComponent } from './components/form-sku/form-sku-search/form-sku-search.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +29,9 @@ import { FormSkuCreateComponent } from './components/form-sku/form-sku-create/fo
     ProductComponent,
     SkuComponent,
     NavbarComponent,
-    FormComponent,
-    FormBootstrapComponent,
     SidenavComponent,
-    FormSkuCreateComponent
+    FormSkuCreateComponent,
+    FormSkuSearchComponent
 
   ],
   imports: [
@@ -48,6 +47,8 @@ import { FormSkuCreateComponent } from './components/form-sku/form-sku-create/fo
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
+    Ng2SearchPipeModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
