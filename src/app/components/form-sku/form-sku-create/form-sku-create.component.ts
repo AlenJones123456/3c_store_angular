@@ -41,6 +41,10 @@ export class FormSkuCreateComponent implements OnInit {
      }
      else
      {
+      // this.http.post("http://127.0.0.1:5000/3c_store/api/v1/product/addproduct/",f)
+      // .subscribe((result)=>{
+      //   console.log("result",result);
+      // })
        console.log(f);
        console.log(f.value);
        alert("Successfully added new data")
