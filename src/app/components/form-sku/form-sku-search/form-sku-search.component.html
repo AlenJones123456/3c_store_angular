@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class="alert alert-info text-center" >SKU</h1>
+<h1 class="alert alert-success text-center" >SKU</h1>
 
 <div class="d-flex">
   <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">ADD PRODUCT</button>
@@ -31,29 +31,110 @@
       <td>{{ post.cost}}</td>
       <td>{{ post.stock_quantity}}</td>
       <td>
-        <button  class="btn btn-danger">Delete</button>
-        <button  class="btn btn-info">Edit</button>
+        <button  class="btn btn-danger" style="margin-right: 10px;">Delete</button>
+        <button  class="btn btn-primary">Edit</button>
       </td>
     </tr>
   </tbody>
 </table>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h2 class="modal-title" id="exampleModalLabel">Add New Data</h2>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        
+        <form  [formGroup]="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="form-group">
+              <label for="sku_id">SKU ID</label>
+              <br/>
+              <select formControlName="sku_id"  id="sku_id">
+                <option value="0" selected disabled>--Select--</option>
+                <option *ngFor="let skuid of sku">{{skuid.sku_id}}
+                </option>
+              </select>
+              <div class="text-danger" *ngIf="form.controls.sku_id.errors && form.controls.sku_id.touched &&form.controls.sku_id.invalid">
+                <div *ngIf="form.controls.sku_id.errors.required">必選</div>
+              </div>
+            </div>
+        
+            <div class="form-group">
+              <label for="product_id">product ID</label>
+              <br/>
+              <select formControlName="product_id"  id="product_id">
+                <option value="0" disabled selected>--Select--</option>
+                <option *ngFor="let productid of sku">{{productid.product_id}}
+                </option>
+              </select>
+              <div class="text-danger" *ngIf="form.controls.product_id.errors && form.controls.product_id.touched &&form.controls.product_id.invalid">
+                <div *ngIf="form.controls.product_id.errors.required">必選</div>
+              </div>
+            </div>
+      
+          <div class="form-group">
+              <label for="sku_code">SKU Code</label>
+              <br/>
+              <select formControlName="sku_code"  id="sku_code">
+                <option value="0" disabled selected>--Select--</option>
+                <option *ngFor="let skucode of sku">{{skucode.sku_code}}
+                </option>
+              </select>
+              <div class="text-danger" *ngIf="form.controls.sku_code.errors && form.controls.sku_code.touched &&form.controls.sku_code.invalid">
+                <div *ngIf="form.controls.sku_code.errors.required">必選</div>
+              </div>
+            </div>  
+              
+          <div class="form-group">
+              <label for="sell_price">Sell Price</label>
+              <input type="number" class="form-control" id="sell_price" formControlName="sell_price" placeholder="Sell price..">
+              <div class="text-danger" *ngIf="form.controls.sell_price.errors && form.controls.sell_price.touched &&form.controls.sell_price.invalid">
+                  <div *ngIf="form.controls.sell_price.errors.required">必填</div>
+              </div>
+              </div>
+        
+          <div class="form-group">
+              <label for="recom_price">Recommended Price</label>
+              <input type="number" class="form-control" id="recom_price" formControlName="recom_price" placeholder="Recommended price..">
+              <div class="text-danger" *ngIf="form.controls.recom_price.errors && form.controls.recom_price.touched &&form.controls.recom_price.invalid">
+                  <div *ngIf="form.controls.recom_price.errors.required">必填</div>
+              </div>
+              </div>
+              
+          <div class="form-group">
+              <label for="cost">Cost</label>
+              <input type="number" class="form-control" id="cost" formControlName="cost" placeholder="Cost..">
+              <div class="text-danger" *ngIf="form.controls.cost.errors && form.controls.cost.touched &&form.controls.cost.invalid">
+                  <div *ngIf="form.controls.cost.errors.required">必填</div>
+              </div>
+              </div>
+              
+          <div class="form-group">
+              <label for="stock_quantity">Stock Quantity</label>
+              <input type="number" class="form-control" id="stock_quantity" formControlName="stock_quantity" placeholder="Quantity..">
+              <div class="text-danger" *ngIf="form.controls.stock_quantity.errors && form.controls.stock_quantity.touched &&form.controls.stock_quantity.invalid">
+                  <div *ngIf="form.controls.stock_quantity.errors.required">必填</div>
+              </div>
+              </div>
+                  
+          <button type="submit">送出</button>
+        
+        
+        
+        </form>
+        
+        
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="submit" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>

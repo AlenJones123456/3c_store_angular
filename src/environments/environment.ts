@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url: 'http://127.0.0.1:5000/3c_store/api/v1/sku/sku_data/ST000001-02',
 };
 
 /*
