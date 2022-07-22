@@ -73,7 +73,8 @@ export class FormProductReadComponent implements OnInit {
 
   }
   deleteProduct(post:any){
-    this.http.delete("http://127.0.0.1:5000/3c_store/api/v1/product/product/",post.value)
+    this.http.delete("http://127.0.0.1:5000/3c_store/api/v1/product/product/",post)
+
      .subscribe((result)=>{
        console.log("result",result);
      })
