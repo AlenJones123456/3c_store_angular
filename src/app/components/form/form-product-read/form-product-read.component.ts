@@ -26,6 +26,7 @@ export class FormProductReadComponent implements OnInit {
   tb:string[]=[
     'ID','PRODUCT_NAME','PRODUCT_MODEL','BRAND_ID','CATEGORY_ID','SUPPLIER_ID','CREATE_TIME','DETAILS'
   ];
+  formValue: any;
   constructor(private productRead:ProductService,private fb:FormBuilder,private productURL:ProductService,private http:HttpClient) {
     this.form=this.fb.group({
       product_name:["",[Validators.required]],//Validators驗證，required必填
@@ -45,7 +46,7 @@ export class FormProductReadComponent implements OnInit {
     }
     else
     {
-     this.http.post(environment.url+"product/addproduct/",f)
+     this.http.post(environment.product+"product/addproduct/",f)
      .subscribe((result)=>{
        console.log("result",result);
      })
@@ -78,7 +79,7 @@ export class FormProductReadComponent implements OnInit {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }), body:{'product_id':post}
   };
-    this.http.delete("http://127.0.0.1:5000/3c_store/api/v1/product/product/",httpOptions)
+    this.http.delete(environment.product+"/product/product/",httpOptions)
      .subscribe((result)=>{
        console.log("result",result);
      })
@@ -87,6 +88,7 @@ export class FormProductReadComponent implements OnInit {
       alert(post)
 
     }
+
   }
 
 
