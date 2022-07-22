@@ -19,6 +19,7 @@ export class FormCreateRestockComponent implements OnInit {
   sku_restock: any=[]
   sku_restock_code: any=[]
   sku_restock_cost: any=[]
+  display = "none";
 
   constructor(private fobu:FormBuilder,private restock_dataurl:RestockService,private http:HttpClient) { 
     this.forms=this.fobu.group({
@@ -56,9 +57,21 @@ export class FormCreateRestockComponent implements OnInit {
     })     
   }
   onSelect(event:any){
-    this.sku_restock_code=this.sku_restock.filter((product:any) => product.product_id==event.target.value)[0].sku;
+    this.sku_restock_code=this.sku_restock.filter((product:any) => product.product_name==event.target.value)[0].sku;
     // console.log(this.sku_restock_cost)
     // const cost = document.getElementById(get_restock_cost)
+  }
+
+  oncostSelect(event:any){
+    this.sku_restock_cost=this.sku_restock_code.filter((Cost:any) => Cost.cost==event.target.value)[0].sku;
+      console.log(this.sku_restock_cost)
+  }
+
+  openModal() {
+    this.display = "block";
+  }
+  onCloseHandled() {
+    this.display = "none";
   }
 
   }

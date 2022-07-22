@@ -1,51 +1,86 @@
-      <form [formGroup]="forms" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
-        <div class ="container">
-          <div class="form-group">
-            <label for="floatingInput">product_name</label>
-            <br/>
-            <select formControlName="productName" id="slct1" (change)="onSelect($event)" >
-              <option value="0" selected>--未選擇--</option>
-              <option *ngFor="let item of sku_restock;" [value]="item.product_id">{{item.product_name}}({{item.product_id}})</option>
-          </select>
+<button type="button" class="btn btn-info btn-lg" (click)="openModal()">Create Form</button>
+      
+
+      <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+        <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title">Form</h4>
+                     <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                 </div>
+
+                 <form [formGroup]="forms" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+                  <div class ="container">
           
-          <div id="validationServer04Feedback" class="invalid-feedback">
-            Please select a valid state.
-          </div>
-      </div>
-      
-        <div class="form-group">
-          <label for="floatingInput">sku_code</label>
-          <br/>
-          <select formControlName="skucode" id="slct2" required>
-            <option value="0" selected>--請先選擇產品--</option>
-            <option *ngFor="let item of sku_restock_code" [value]="item.sku_id">{{item.sku_code}}({{item.sku_id}})</option>
-        </select>
-          <div id="validationServer04Feedback" class="invalid-feedback">
-            Please select a valid state.
-          </div>
-        </div>
-      
-        <div class="form-group">
-          <label for="floatingInput">cost</label>
-          <br/>
-          <select formControlName="cost" id="slct3" required>
-            <option *ngFor="let item of sku_restock_cost;" [value]="item.cost">{{item.cost}}</option>
-      </select>
-          <div id="validationServer04Feedback" class="invalid-feedback">
-            Please input a valid state.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="validationTextarea" class="form-label">Memo</label>
-          <textarea class="form-control" id="validationTextarea" placeholder="Please enter a message" required></textarea>
-          <div class="invalid-feedback">
-            Please enter a message.
-          </div>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-      </div>
-  
+                    <div class="form-group">
+                      <label for="floatingInput">product_id</label>
+                      <br/>
+                      <select formControlName="product_id" id="slct1" >
+                        <option value="0" selected>--未選擇--</option>
+                        <option *ngFor="let item of sku_restock;" [value]="item.product_id">({{item.product_id}})</option>
+                    </select>
+                    
+                    <!-- <div class="text-danger" *ngIf="forms.controls.product_id.errors && forms.controls.product_id.touched &&forms.controls.product_id.invalid">
+                      <div *ngIf="forms.controls.product_id.errors.required">必選</div> 
+                    </div> -->
+                </div>
+          
+                    <div class="form-group">
+                      <label for="floatingInput">product_name</label>
+                      <br/>
+                      <select formControlName="productName" id="slct1" (change)="onSelect($event)" >
+                        <option value="0" selected>--未選擇--</option>
+                        <option *ngFor="let item of sku_restock;" [value]="item.product_name">{{item.product_name}})</option>
+                    </select>
+                    
+                    <!-- <div class="text-danger" *ngIf="forms.controls.product_id.errors && forms.controls.product_id.touched &&forms.controls.product_id.invalid">
+                      <div *ngIf="forms.controls.product_id.errors.required">必選</div> 
+                    </div> -->
+                </div>
+                
+                  <div class="form-group">
+                    <label for="floatingInput">sku_code</label>
+                    <br/>
+                    <select formControlName="skucode" id="slct2" required>
+                      <option value="0" selected>--請先選擇產品--</option>
+                      <option *ngFor="let item of sku_restock_code" [value]="item.sku_id">{{item.sku_code}}({{item.sku_id}})</option>
+                  </select>
+                  <!-- <div class="text-danger" *ngIf="forms.controls.sku_id.errors && forms.controls.sku_id.touched &&forms.controls.sku_id.invalid">
+                    <div *ngIf="forms.controls.sku_id.errors.required">必選</div> 
+                  </div> -->
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="floatingInput">cost</label>
+                    <br/>
+                    <select formControlName="cost" id="slct3" (change)="oncostSelect($event)">
+                      <option *ngFor="let item of sku_restock_cost;" [value]="item.cost">{{item.cost}}</option>
+                </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                      Please input a valid state.
+                    </div>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="validationTextarea" class="form-label">Memo</label>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Please enter a message" required></textarea>
+                    <div class="invalid-feedback">
+                      Please enter a message.
+                    </div>
+                  </div>
+          
+                  <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+          
+          
+                </div>
+               
+                 <div class="modal-footer">
+                     <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+                 </div>
+           
+            
+
 
  

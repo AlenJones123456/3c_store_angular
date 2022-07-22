@@ -8,6 +8,8 @@ import { RestockService } from 'src/app/services/restock/restock.service';
 })
 export class RestockComponent implements OnInit {
   allRestock: any;
+  
+  
   constructor(private ResctockLink : RestockService) { }
 
   ngOnInit(): void {
@@ -22,6 +24,6 @@ export class RestockComponent implements OnInit {
           this.allRestock = response.data;
         });
   }
-
-
 }
+
+
