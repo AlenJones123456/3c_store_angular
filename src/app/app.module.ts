@@ -12,11 +12,8 @@ import { AppComponent } from './app.component';
 import { FormProductCreateComponent } from './components/form/form-product-create/form-product-create.component';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import { ProductComponent } from './components/product/product.component';
-<<<<<<< HEAD
 import { RestockComponent } from './components/restock/restock.component';
-=======
 import { FormProductReadComponent } from './components/form/form-product-read/form-product-read.component';
->>>>>>> 125b1dd2770a5e6bbdfbb8322188d2038c42266e
 
 
 
@@ -31,13 +28,10 @@ const appRoute:Routes=[
     AppComponent,
     TransactionComponent,
     ProductComponent,
-<<<<<<< HEAD
-    RestockComponent
-=======
+    RestockComponent,
     FormProductCreateComponent,
     FormProductReadComponent,
 
->>>>>>> 125b1dd2770a5e6bbdfbb8322188d2038c42266e
 
   ],
   imports: [
