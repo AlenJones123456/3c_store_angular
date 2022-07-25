@@ -14,7 +14,11 @@ import { RestockComponent } from './components/restock/restock.component';
     AppComponent,
     TransactionComponent,
     ProductComponent,
+<<<<<<< HEAD
     RestockComponent
+=======
+
+>>>>>>> 3b7a92d7 (revise)
   ],
   imports: [
     BrowserModule,
