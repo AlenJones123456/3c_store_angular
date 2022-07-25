@@ -1,5 +1,17 @@
 <h1 class="alert alert-info text-center" >PRODUCT</h1>
 
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul  class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
+    <li><a *ngFor="let post of posts" class="dropdown-item" data-bs-toggle="dropdown" href="#">{{post.product_id}}</a></li>
+
+
+  </ul>
+</div>
+
+
 <table class="table table-bordered table-striped table-hover ">
   <thead class="alert alert-dark">
     <tr>
@@ -20,6 +32,7 @@
       <td>{{ post.brand_id}}</td>
       <td>{{ post.category_id}}</td>
       <td>{{ post.supplier_id}}</td>
+      <td>{{ post.create_time}}</td>
       <td>{{ post.create_time}}</td>
     </tr>
   </tbody>
